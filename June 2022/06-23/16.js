@@ -28,7 +28,7 @@
 // 1 <= n <= 45
 
 const climbStairs = (n, memo = []) => {
-    if (memo[n] != null) {
+    if (memo[n]) {
       return memo[n];
     }
     let result;

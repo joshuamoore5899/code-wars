@@ -15,3 +15,6 @@ def to_jaden_case(a):
     for word in array:
         ans.append(word.capitalize())
     return " ".join(ans)
+
+def to_jaden_case(a):
+    return " ".join([word.capitalize() for word in a.split()])

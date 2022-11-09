@@ -27,15 +27,15 @@ var kookaCounter = function(laughing) {
   if (laughing.length < 1) {
     return 0;
   }
-  let filtered = laughing.split('').filter((x) => x === 'h' || x === 'H');
+  let filtered = laughing.split('').filter((x) => x === 'h' || x === 'H'); //array of only h and H
   let count = [filtered[0]];
   let tracker = {
     'h': 'H',
     'H': 'h'
   }
   for (let i = 0; i < filtered.length; i++) {
-    if (filtered[i] === tracker[count[count.length - 1]]) {
-      count.push(filtered[i]);
+    if (filtered[i] === tracker[count[count.length - 1]]) { //check for alternating characters
+      count.push(filtered[i]);  //add to array if alternating
     }
   }
   return count.length;

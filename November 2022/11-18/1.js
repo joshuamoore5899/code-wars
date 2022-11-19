@@ -35,11 +35,9 @@ var firstMissingPositive = function(nums) {
     }
     nums.push(nums[nums.length - 1] + 1);
     for (let i = index + 1; i < nums.length; i++) {
-        if (i === nums.length - 1) {
-            return nums[nums.length - 1]
-        }
         if (nums[i] - nums[i - 1] > 1) {
             return nums[i - 1] + 1;
         }
     }
+    return nums[nums.length - 1]
 };
